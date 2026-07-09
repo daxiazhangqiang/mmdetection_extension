@@ -1,15 +1,12 @@
 # Copyright (c) OpenMMLab. All rights reserved.
-import itertools
 from typing import Iterator, List, Optional, Sized, Union
-import math
 import bisect
 import numpy as np
 import torch
-from mmengine.dataset import BaseDataset
-from mmengine.dist import get_dist_info, sync_random_seed
 from torch.utils.data import Sampler
 
-from mmdet.registry import DATA_SAMPLERS
+from mmengine.registry import DATA_SAMPLERS
+from mmengine.dist import get_dist_info, sync_random_seed
 
 
 @DATA_SAMPLERS.register_module()
